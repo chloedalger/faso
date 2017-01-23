@@ -1,6 +1,6 @@
 import time
-import numpy as np
-import cv2
+import numpy as np #permet de manipuler des tableaux
+import cv2 #image en temps réel
 
 class Camera:
     def __init__(self):
