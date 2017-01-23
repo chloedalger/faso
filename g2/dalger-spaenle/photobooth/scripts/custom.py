@@ -1,11 +1,11 @@
 import listalbums
-import Tkinter
+import Tkinter 
 import tkFileDialog
 import tkSimpleDialog
 import os.path
 import Image
 import ImageTk
-import ConfigParser
+import ConfigParser #gerer un fichier de configuration 
 import os.path
 from constants import SCREEN_W, SCREEN_H
 
@@ -19,9 +19,9 @@ def restore_conf():
     if not os.path.exists(conf_filename):
         conf_file = open(conf_filename, 'w')
         default_conf = '''[main]
-emailsubject = Your Postcard from the Wyolum Photobooth
-emailmsg = Here's your picture from the http://wyolum.com photobooth!
-photocaption = postcard from the xxx event
+emailsubject = ChloeMahe Photobooth
+emailmsg = Voila ta photo
+photocaption = postcard from polytech
 logopng = logo.png
 
 albumid = None
@@ -38,7 +38,7 @@ oauth2_refresh_period = 1800000
     if not os.path.exists(conf_filename):
         raise ValueError('Configuration file "%s" is missing.' % conf_filename)
 
-    conf = ConfigParser.ConfigParser()
+    conf = ConfigParser.ConfigParser() #creer fichier de  configuration
     conf.read(conf_filename)
 
     emailSubject = conf.get('main', 'emailSubject') 
