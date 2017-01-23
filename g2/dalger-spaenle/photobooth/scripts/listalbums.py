@@ -5,7 +5,7 @@ import Tkinter
 
 class AlbumSelect:
     '''
-    GUI to select an album from a list, update entry with album id
+    choisir un album dans la liste
     '''
     fontsize=20
     def __init__(self, root, entrybox, entries):
@@ -138,7 +138,7 @@ def getAlbums(email):
 
 def test():
     if False:
-        entries = getAlbums(email="kevin.osborn@gmail.com")
+        entries = getAlbums(email="chloemahe17@gmail.com")
     else:
         entries = map(str, range(1000))
 
@@ -154,5 +154,5 @@ if __name__ == '__main__':
         if sys.argv[1] == 'gui':
             test()
     else:
-        for l in getAlbums(email="kevin.osborn@gmail.com"):
+        for l in getAlbums(email="chloemahe17@gmail.com"):
             print l
