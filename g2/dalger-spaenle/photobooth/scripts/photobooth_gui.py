@@ -128,15 +128,10 @@ def check_and_snap(force=False, countdown1=None):
         send_button.config(state=DISABLED)
         etext.config(state=DISABLED)
     if (Button_enabled == False):
-        ## inform alamode that we are ready to receive button press events
-        ## ser.write('e') #enable button (not used)
         Button_enabled = True
-        # can.delete("text")
-        # can.create_text(WIDTH/2, HEIGHT - STATUS_H_OFFSET, text="Press button when ready", font=custom.CANVAS_FONT, tags="text")
-        # can.update()
+
         
-    ## get command string from alamode
-#    command = ser.readline().strip()
+
     command=""
     if Button_enabled and (force or command == "snap" or timelapse_due()):
         ## take a photo and display it
